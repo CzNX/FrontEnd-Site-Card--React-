@@ -1,0 +1,81 @@
+.Footer {
+  width: 100%;
+  margin: auto;
+  font-size: 40px;
+
+  /* position: fixed; */
+}
+
+.footercontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(31, 41, 55, 1);
+  margin: auto;
+  min-height: 100px;
+}
+.copyright {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+@keyframes bounce-6 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-0px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+.footericon {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  animation-name: bounce-6;
+  animation-timing-function: ease;
+}
+
+.socials svg,
+.up svg {
+  fill: rgba(156, 163, 175, 1);
+  font-weight: lighter;
+}
+
+.socials svg:hover,
+.up svg:hover {
+  fill: #fff;
+}
+
+/* media */
+
+@media (max-width: 640px) {
+  .footercontainer {
+    flex-direction: column;
+  }
+  .Footer {
+    margin-top: 10px;
+  }
+  .copyright {
+    padding: 15px 0;
+  }
+  .socials {
+    padding-top: 10px;
+  }
+}
